@@ -11,4 +11,10 @@ public interface SimpleClient {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     Response getGitHubUserById(@PathParam("id") int id);
+
+    @Path("/request/{id}")
+    @GET
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    Response getGitHubUserById(@PathParam("id") int id);
 }
